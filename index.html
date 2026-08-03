@@ -23,7 +23,18 @@
 
   header { padding:74px 0 44px; }
   h1 { font-family:'Shrikhand', Georgia, serif; font-weight:400;
-       font-size:clamp(44px, 9vw, 92px); line-height:.95; color:var(--accent); }
+       font-size:clamp(44px, 9vw, 92px); line-height:.95;
+       display:inline-block; position:relative;
+       /* satin: bands of light where the fabric folds catch it */
+       background:linear-gradient(176deg,
+         #6d3a5e 0%, #b95f92 9%, #7a3f66 18%, #592f4c 27%,
+         #e0609f 38%, #ffa9cf 45%, #c25a91 52%,
+         #6b3a5b 64%, #a85183 74%, #5d3350 85%, #8a4770 100%);
+       -webkit-background-clip:text; background-clip:text; color:transparent;
+       filter:drop-shadow(0 2px 10px rgba(224,96,159,.16)); }
+  /* the fold mark: three creases of satin, minimal */
+  .mark { display:block; width:52px; height:20px; margin-bottom:16px; overflow:visible; }
+  .mark path { fill:none; stroke-linecap:round; }
   .tagline { margin-top:16px; font-size:clamp(15px,2.4vw,19px); color:var(--dim); max-width:620px; }
   .meta { margin-top:22px; font-size:11px; letter-spacing:.28em;
     text-transform:uppercase; color:var(--dim); }
@@ -93,6 +104,11 @@
 
 <div class="wrap">
   <header>
+    <svg class="mark" viewBox="0 0 52 20" aria-hidden="true">
+      <path d="M1 5 C 12 -1, 26 11, 51 3"  stroke="#b95f92" stroke-width="2"/>
+      <path d="M1 11 C 14 5, 28 16, 51 9"  stroke="#e0609f" stroke-width="2.4"/>
+      <path d="M1 17 C 16 12, 30 20, 51 15" stroke="#7a3f66" stroke-width="2"/>
+    </svg>
     <h1>Satin Press</h1>
     <p class="tagline">Audio plugins built by hand and tuned by ear.
       Hear them before you decide.</p>
