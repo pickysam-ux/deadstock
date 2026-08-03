@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Velvet Console — a gift from Satin Press</title>
+<style>
+  :root { --bg:#190e21; --ink:#f4ebf8; --dim:#9b86a9; --line:#31223c;
+          --accent:#e0609f; --hot:#ff8a5c; --card:#20122a; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--ink); line-height:1.65;
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:620px; margin:0 auto; padding:72px 26px 90px; }
+  .kicker { font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--dim); }
+  h1 { font-size:38px; line-height:1.1; margin:14px 0 6px;
+       background:linear-gradient(176deg,#6d3a5e 0%,#b95f92 12%,#592f4c 30%,
+         #e0609f 45%,#ffa9cf 52%,#6b3a5b 72%,#a85183 86%,#5d3350 100%);
+       -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { color:var(--dim); font-size:15px; margin-bottom:26px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:4px; padding:26px 24px; }
+  audio { width:100%; height:34px; margin:6px 0 18px; }
+  .dl { display:block; text-align:center; text-decoration:none; font-size:14px;
+    font-weight:700; letter-spacing:.06em; padding:15px; border-radius:3px;
+    background:var(--hot); color:#2a1006; }
+  .dl:hover { background:#ffa87a; }
+  h2 { font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+       color:var(--dim); margin:34px 0 12px; }
+  p { font-size:14.5px; color:#d6c9df; }
+  code { display:block; background:#100819; border:1px solid var(--line); border-radius:3px;
+    padding:12px 14px; margin:12px 0; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px; color:#f0dcea; overflow-x:auto; white-space:pre; }
+  ol { margin:0 0 0 20px; } li { margin-bottom:9px; font-size:14.5px; color:#d6c9df; }
+  .foot { margin-top:40px; padding-top:22px; border-top:1px solid var(--line);
+    font-size:12px; color:var(--dim); }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">A gift from Satin Press</div>
+  <h1>Velvet Console</h1>
+  <p class="sub">This one normally costs $12 — it's yours. Please keep the link
+     between us.</p>
+
+  <div class="card">
+    <div class="kicker" style="margin-bottom:8px">Drums, then vocal — dry, then wet</div>
+    <audio controls preload="none" src="../../audio/02_velvet_console.m4a"></audio>
+    <a class="dl" href="SatinPress_VelvetConsole_v1.0.zip">Download Velvet Console</a>
+  </div>
+
+  <h2>Installing</h2>
+  <ol>
+    <li>Unzip. Put the <b>.component</b> in <b>~/Library/Audio/Plug-Ins/Components</b>
+        and the <b>.vst3</b> in <b>~/Library/Audio/Plug-Ins/VST3</b>
+        (in Finder press <b>⌘⇧G</b> and paste the path).</li>
+    <li>It isn't Apple-notarized yet, so macOS will quarantine it. Open Terminal and paste:</li>
+  </ol>
+  <code>xattr -cr ~/Library/Audio/Plug-Ins/Components/*.component ~/Library/Audio/Plug-Ins/VST3/*.vst3</code>
+  <ol start="3">
+    <li>Fully quit and reopen your DAW. It's under <b>Satin Press</b>.</li>
+  </ol>
+
+  <h2>One favour</h2>
+  <p>Tell me what you actually think — what it flatters, what it ruins, what knob
+     is missing. There's a feedback box on
+     <a href="../../">the main page</a>. Brutal beats polite.</p>
+
+  <div class="foot">Satin Press · <a href="../../">satin press home</a></div>
+</div>
+</body>
+</html>
